@@ -1,0 +1,11 @@
+simplecalculator <- function(x,y){
+ m <- (x+y)
+ n <- (x-y)
+ o <- (x*y)
+ p <- (x/y)
+ print(m)
+ print(n)
+ print(o)
+ print(p)
+}
+simplecalculator(5,1)
