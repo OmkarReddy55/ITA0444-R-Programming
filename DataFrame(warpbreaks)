@@ -1,0 +1,27 @@
+#1 
+#i)
+w<-data.frame(warpbreaks)
+p<-glm(formula = breaks~wool+tension,family = poisson,data=w )
+p
+
+# ii)
+i<-data.frame(iris)
+s<- sample(c(TRUE,FALSE),nrow(i),replace = TRUE,prob = c(0.8,0.2))
+train<-i[s,]
+test<-i[!s,]
+train
+test
+
+# iii)
+summary(train)
+summary(test)
+
+# iv)
+mo<-glm(formula = Sepal.Length~Sepal.Width,family="binomial",data = train)
+mo
+
+# v)
+m<-lm(Sepal.Length~Sepal.Width,test)
+p<-predict(m)
+p
+confusion Matrix(test,p)
